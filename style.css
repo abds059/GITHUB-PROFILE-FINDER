@@ -1,0 +1,122 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #404f5e;
+    --sec-color: #6b7076;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 1em;
+}
+
+.inputfield{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 12px;
+}
+
+#username{
+    padding: 0.5rem;
+    border: 2px solid black;
+    border-radius: 12px;
+
+}
+
+#btn{
+    padding: 0.5em;
+    border: 2px solid black;
+    border-radius: 12px;
+
+}
+
+#btn:hover{
+    color: white;
+    background-color: var(--sec-color);
+}
+
+
+input:hover{
+    background-color: var(--sec-color);
+}
+
+input::placeholder {
+    color: lightgray; 
+}
+
+
+.content{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 2rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    margin: 12px;
+}
+
+@media screen and (max-width: 400px) {
+    h1{
+        font-size: 1.5rem;
+
+    }
+
+    .inputfield{
+        padding: 0.5rem;
+        gap: 6px;
+    }
+
+    #btn{
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    h1{
+        font-size: 1rem;
+    }
+
+    input{
+        padding: 5px;
+        font-size: 0.75rem;
+    }
+
+    .inputfield{
+        display: grid;
+    }
+
+    #btn{
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    p{
+        font-size: 0.75rem;
+    }
+}
