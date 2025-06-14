@@ -4,6 +4,10 @@ btn.addEventListener('click', async () => {
 
     let username = document.getElementById('username').value;
     
+    if(username === ''){
+        prompt('Enter a username');
+    }
+
     let URL = `https://api.github.com/users/${username}`;
     let response = await fetch(URL);
 
@@ -47,8 +51,6 @@ btn.addEventListener('click', async () => {
     let public_rep = document.createElement('p');
     public_rep.innerHTML = `Public Repos: ${data.public_repos}`;
     contentbox.appendChild(public_rep);
-
-    
 
 });
 
