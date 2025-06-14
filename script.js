@@ -29,8 +29,9 @@ btn.addEventListener('click', async () => {
     let contentbox = document.createElement('div');
     contentbox.classList.add('content');
     contentbox.innerHTML = '';
-
-    document.body.appendChild(contentbox);
+ 
+    let searchSection = document.getElementById('search');
+    searchSection.appendChild(contentbox);
 
     let avatar = document.createElement('img');
     avatar.src = data.avatar_url;
@@ -55,7 +56,6 @@ btn.addEventListener('click', async () => {
     bio.innerHTML = `Bio: ${data.bio}`;
     contentbox.appendChild(bio);
 
-    
     let public_rep = document.createElement('p');
     public_rep.innerHTML = `Public Repos: ${data.public_repos}`;
     contentbox.appendChild(public_rep);
