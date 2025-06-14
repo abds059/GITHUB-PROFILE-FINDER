@@ -5,11 +5,18 @@ btn.addEventListener('click', async () => {
     let username = document.getElementById('username').value;
     
     if(username === ''){
-        prompt('Enter a username');
+        alert('Enter a username');
+        return;
     }
 
     let URL = `https://api.github.com/users/${username}`;
     let response = await fetch(URL);
+
+    if (!response.ok) {
+        alert('User not found. Please enter a valid GitHub username.');
+        return;
+    }
+
 
     let data = await response.json();
 
@@ -30,7 +37,8 @@ btn.addEventListener('click', async () => {
     avatar.alt = "User Avatar";
     avatar.style.width = "100px"; // You can adjust size
     avatar.style.borderRadius = "50%"; // Optional: makes it circular
-    
+    avatar.style.border = "2px solid rgb(118, 115, 115)";
+
     let para = document.createElement('p');
     para.innerHTML = `Name: ${data.name}`;   
 
