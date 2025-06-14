@@ -162,6 +162,10 @@ p{
 
     }
 
+    .wrapper h4 {
+        font-size: 1rem;
+    }
+
     .inputfield{
         padding: 0.5rem;
         gap: 6px;
@@ -174,12 +178,16 @@ p{
 
 @media screen and (max-width: 300px) {
     h1{
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
-    input{
-        padding: 5px;
-        font-size: 0.75rem;
+    .wrapper h4 {
+        font-size: 16px;
+    }   
+
+    .inputfield{
+        padding: 0.5rem;
+        gap: 6px;
     }
 
     .inputfield{
